@@ -1,0 +1,48 @@
+.signin {
+  width: 60%;
+  margin: auto;
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 50px;
+}
+.signin > form:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  gap: 15px;
+}
+.signin > form:nth-child(1) > h2 {
+  padding-bottom: 15px;
+  border-bottom: 2px solid lightgray;
+}
+.signin > form:nth-child(1) > .tog {
+  height: 40px;
+}
+.signin > form:nth-child(1) > #sub {
+  font-size: 18px;
+  padding: 8px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+.signin > form:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 350px;
+}
+.signin > form:nth-child(2) > h2 {
+  padding-bottom: 15px;
+  border-bottom: 2px solid lightgray;
+}
+.signin > form:nth-child(2) > .tog {
+  height: 40px;
+}
+.signin > form:nth-child(2) > #reg {
+  font-size: 18px;
+  padding: 8px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
