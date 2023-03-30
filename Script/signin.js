@@ -1,5 +1,5 @@
 let Form = document.querySelector("form:nth-child(1)");
-let LSEmail = document.getElementById("email");
+let LSEmail = document.getElementById("semail");
 let LSPass = document.getElementById("spass");
 
 let SData = JSON.parse(localStorage.getItem("Register")) || [];
@@ -17,8 +17,8 @@ function InpData(e) {
     }
   }
   if (flag) {
-    alert("yes");
+    alert("Sign In Successfull");
   } else {
-    alert("no");
+    alert("Email And Password are different");
   }
 }

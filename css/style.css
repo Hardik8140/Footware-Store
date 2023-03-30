@@ -36,15 +36,16 @@
 #nav > .logo {
   display: flex;
   width: 850px;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
-#nav > .logo > a > img {
-  width: 200px;
+#nav > a > img {
+  width: 180px;
 }
 #nav > .logo > a {
   text-decoration: none;
   font-weight: bold;
+  font-size: 14px;
   color: black;
 }
 #nav > .logo > a:hover {
@@ -54,20 +55,53 @@
   width: 370px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 #nav > #search > #inp {
-  width: 280px;
+  width: 230px;
+  padding: 10px;
 }
 
 #nav > #search > a > img {
-  width: 30px;
+  width: 20px;
+}
+
+/* Inner Toggel */
+#collection {
+  width: 85%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+  padding-bottom: 30px;
+}
+#collection > #style {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#collection > #trending {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#collection > #style > a {
+  text-decoration: none;
+  color: gray;
+}
+#collection > #trending > a {
+  text-decoration: none;
+  color: gray;
 }
 
 /* Landing */
+
 a {
   text-decoration: none;
 }
 #landing {
+  /* position: absolute; */
   width: 100%;
   background-image: url(https://media.crocs.com/images/f_auto,q_auto,dpr_auto/marketing/dreamville-hero-full/crocs);
   background-position: center;
@@ -108,8 +142,6 @@ a {
 .toggel {
   display: flex;
   justify-content: center;
-  /* padding-top: 20px; */
-  /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
@@ -136,9 +168,12 @@ a {
   width: 85%;
   margin: auto;
   margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  /* justify-content: space-between; */
   margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
 }
 #container > .card {
   border-radius: 9px;
@@ -453,8 +488,15 @@ a {
   grid-column-start: 1;
   grid-column-end: 3;
 }
+
+/* Large Screen */
+
 /* Median Screen */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 768px) {
+  #container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 /* Small Screen */

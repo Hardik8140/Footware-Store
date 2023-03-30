@@ -1,0 +1,49 @@
+#CartData {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-left: 20px;
+  margin: 30px;
+}
+#CartData > div {
+  width: 100%;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 10px;
+}
+#CartData > div:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+}
+#CartData > div > img {
+  width: 80%;
+  /* border: 1px solid red; */
+  margin-bottom: 25px;
+}
+#CartData > div > p {
+  font-size: 12px;
+  margin-bottom: 25px;
+  color: black;
+}
+#CartData > div > h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: rgb(68, 68, 68);
+}
+
+#CartData > div > .inc {
+  padding: 30px;
+}
+#CartData > div > .rmc {
+  width: 80px;
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+#CartData > div > .rmv:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}

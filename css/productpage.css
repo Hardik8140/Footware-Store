@@ -1,0 +1,26 @@
+#cont {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  /* margin-top: 30px; */
+}
+#cont > #pro {
+  padding: 30px 0px 30px 30px;
+}
+#cont > #pro > img {
+  width: 95%;
+  margin-left: 50px;
+}
+.productdetailed {
+  width: 500px;
+  margin: auto;
+}
+#productInfo {
+  margin-top: 30px;
+  margin-left: 100px;
+}
+#productInfo > div > p {
+  font-size: 15px;
+  margin-bottom: 8px;
+  color: gray;
+}
