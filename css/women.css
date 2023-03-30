@@ -1,7 +1,5 @@
 /* Product type */
-h2 {
-  padding: 15px;
-}
+
 #Wcoll {
   display: flex;
   justify-content: space-around;
@@ -48,4 +46,107 @@ h2 {
 }
 #Wcoll > .card:nth-child(6) {
   background-color: rgb(226, 188, 188);
+}
+
+/* Product */
+
+#product {
+  display: flex;
+  margin-top: 50px;
+  /* border: 1px solid red; */
+}
+#product > #filter {
+  width: 25%;
+  margin: 10px;
+  /* border: 1px solid rebeccapurple; */
+}
+#product > #filter > #filterSort {
+  display: flex;
+
+  /* border: 1px solid red; */
+  width: 70%;
+}
+#product > #filter > #filterSort > img {
+  width: 10%;
+  margin-bottom: 10px;
+}
+#product > #filter > #filterSort > h2 {
+  font-size: 20px;
+  margin-left: 8px;
+}
+#product > #filter > #type {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 30px;
+  border: 1px solid lightgray;
+}
+#product > #filter > #filterImg {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+#filterImg > .btn > button {
+  display: flex;
+  padding: 10px;
+  border: 1px solid lightgray;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#filterImg > .btn > button:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+#filterImg > .btn > button > img {
+  width: 30%;
+}
+#product > #allproduct {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-left: 20px;
+}
+#product > #allproduct > div {
+  width: 100%;
+  /* border-radius: 10px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid rebeccapurple; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#product > #allproduct > div:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+}
+#product > #allproduct > div > img {
+  width: 80%;
+  /* border: 1px solid red; */
+  margin-bottom: 25px;
+}
+#product > #allproduct > div > p {
+  font-size: 12px;
+  margin-bottom: 25px;
+  color: black;
+}
+#product > #allproduct > div > h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: rgb(68, 68, 68);
+}
+#product > #allproduct > div > button {
+  margin-bottom: 30px;
+  width: 100px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  /* font-weight: bold; */
+}
+#product > #allproduct > div > button:hover {
+  background-color: black;
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
 }
