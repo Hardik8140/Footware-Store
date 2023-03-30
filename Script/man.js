@@ -1,4 +1,6 @@
-let product = [
+const container = document.getElementById("allproduct");
+
+let footproduct = [
   {
     id: 1,
     image:
@@ -272,3 +274,120 @@ let product = [
     category: "Slides",
   },
 ];
+
+let cartData = JSON.parse(localStorage.getItem("cart")) || [];
+
+// filter Data
+
+let fill = document.querySelector("#filterImg ");
+let but = document.querySelectorAll(".btn");
+
+for (let i = 0; i < but.length; i++) {
+  but[i].addEventListener("click", function () {
+    let filtered = footproduct.filter((ele) => {
+      return ele.category === but[i].innerText;
+    });
+    console.log(filtered);
+    DisplayData(filtered);
+  });
+}
+
+// fill.addEventListener("click", function () {
+//   let filtered = footproduct.filter((ele) => {
+//     return ele.category === but.innerText;
+//   });
+//   console.log(filtered);
+//   DisplayData(filtered);
+// });
+
+// Search Product
+
+let search = document.getElementById("search");
+let inp = document.getElementById("inp");
+
+search.addEventListener("input", () => {
+  if (inp.value === "") {
+    DisplayData(footproduct);
+  } else {
+    let searchData = footproduct.filter((el) => {
+      if (
+        el.category.toUpperCase().includes(inp.value.toUpperCase()) === true
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+    // console.log(searchData);
+    DisplayData(searchData);
+  }
+});
+
+// Sorting Data
+
+let sortbtn = document.getElementById("type");
+sortbtn.addEventListener("change", filterData);
+
+function filterData() {
+  if (sortbtn.value === "") {
+    DisplayData(footproduct);
+  } else {
+    if (sortbtn.value === "lth") {
+      let sortData = [...footproduct];
+      sortData.sort((a, b) => {
+        return a.price - b.price;
+      });
+      DisplayData(sortData);
+    } else {
+      let sortData = [...footproduct];
+      sortData.sort((a, b) => {
+        return b.price - a.price;
+      });
+      DisplayData(sortData);
+    }
+  }
+}
+
+// Fetch Data
+
+DisplayData(footproduct);
+function DisplayData(data) {
+  container.innerHTML = "";
+
+  data.forEach((el) => {
+    let crd = document.createElement("div");
+    let image = document.createElement("img");
+    let name = document.createElement("p");
+    let rate = document.createElement("p");
+    let price = document.createElement("h3");
+    let category = document.createElement("p");
+    let addTocart = document.createElement("button");
+
+    image.src = el.image;
+    name.innerText = el.product_name;
+    rate.innerText = el.ratting;
+    price.innerText = `₹${el.price}`;
+    category.innerText = el.category;
+    addTocart.innerText = "Add to Cart";
+
+    addTocart.addEventListener("click", () => {
+      if (checkAvailable(el)) {
+        alert("Prodict already in Cart");
+      } else {
+        cartData.push({ ...el, quantity: 1 });
+        localStorage.setItem("cart", JSON.stringify(cartData));
+      }
+    });
+
+    crd.append(image, name, rate, price, addTocart);
+    container.append(crd);
+  });
+}
+function checkAvailable(el) {
+  for (let i = 0; i < cartData.length; i++) {
+    if (el.id === cartData[i].id) {
+      return true;
+    }
+  }
+  return false;
+}

@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>flowery-ear-2957</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
   </head>
   <body>
     <!-- Top bar -->
@@ -38,24 +42,6 @@
       </div>
     </div>
 
-    <!-- <div id="collection">
-      <div id="style">
-        <h2>By Style</h2>
-        <a href="">Clogs</a>
-        <a href="">Boots</a>
-        <a href="">Sandals</a>
-        <a href="">Slides</a>
-        <a href="">Flip-Flop</a>
-      </div>
-      <div id="trending">
-        <h2>Now Trending</h2>
-        <a href="">Llimited Release</a>
-        <a href="">online Exclusive</a>
-        <a href="">Fuzz Lined</a>
-        <a href="">Shoe and Moons Set</a>
-        <a href="">Classic</a>
-      </div>
-    </div> -->
     <!-- Landing -->
 
     <a href="">
@@ -82,7 +68,7 @@
 
     <!-- Product type -->
 
-    <div id="container">
+    <div id="container" data-flickity='{ "groupCells": true }'>
       <div class="card">
         <a href="./classic.html">
           <img
@@ -150,7 +136,7 @@
 
     <!-- Third Toggel -->
 
-    <div id="container1" data-flickity='{ "groupCells": true }'>
+    <div id="container1">
       <div class="card1">
         <a href="./classic.html">
           <img
@@ -335,4 +321,5 @@
     </div>
   </body>
   <script src="./Script/search.js"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </html>
