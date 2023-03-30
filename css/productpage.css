@@ -17,10 +17,77 @@
 }
 #productInfo {
   margin-top: 30px;
+  width: 75%;
+  /* border: 1px solid rebeccapurple; */
   margin-left: 100px;
 }
-#productInfo > div > p {
+#productInfo > div:nth-child(1) > p {
   font-size: 15px;
   margin-bottom: 8px;
   color: gray;
+}
+#productInfo > div:nth-child(1) {
+  margin-bottom: 20px;
+}
+#productInfo > div:nth-child(2) {
+  border-top: 2px solid gray;
+  /* width: 80%; */
+  border-bottom: 2px solid gray;
+  padding-bottom: 30px;
+}
+#productInfo > div:nth-child(2) > h4 {
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+#productInfo > div:nth-child(2) > #colorBtn {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+#colorBtn button {
+  border: none;
+  padding: 5px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#colorBtn button:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 1px solid black;
+}
+#size {
+  margin-top: 10px;
+}
+#size > h4 {
+  margin-bottom: 10px;
+}
+#size > #sizeButoon {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+#size > #sizeButoon > .size {
+  padding: 5px;
+}
+#size > #sizeButoon > .size:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+#addToCart {
+  margin-top: 30px;
+  border-bottom: 2px solid gray;
+  padding-bottom: 30px;
+}
+#addToCart > .Cart {
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+  background-color: aquamarine;
+  border: 1px solid gray;
+  font-weight: bold;
+}
+#addToCart > .Cart:hover {
+  background-color: aqua;
+  text-decoration: underline;
 }

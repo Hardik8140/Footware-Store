@@ -279,13 +279,40 @@ let cartData = JSON.parse(localStorage.getItem("cart")) || [];
 
 // filter Data
 
-let fill = document.getElementById("filterImg");
+let fill = document.querySelector("#filterImg ");
+let but = document.querySelectorAll(".btn");
 
-fill.addEventListener("Select", function () {
-  let filtered = footproduct.filter((el) => {
-    return el.category === fill.value;
+for (let i = 0; i < but.length; i++) {
+  but[i].addEventListener("click", function () {
+    let filtered = footproduct.filter((ele) => {
+      return ele.category === but[i].innerText;
+    });
+    console.log(filtered);
+    DisplayData(filtered);
   });
-  DisplayData(filtered);
+}
+
+// Search Product
+
+let search = document.getElementById("search");
+let inp = document.getElementById("inp");
+
+search.addEventListener("input", () => {
+  if (inp.value === "") {
+    DisplayData(footproduct);
+  } else {
+    let searchData = footproduct.filter((el) => {
+      if (
+        el.category.toUpperCase().includes(inp.value.toUpperCase()) === true
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+    // console.log(searchData);
+    DisplayData(searchData);
+  }
 });
 
 // Sorting Data
@@ -327,7 +354,11 @@ function DisplayData(data) {
     let price = document.createElement("h3");
     let category = document.createElement("p");
     let addTocart = document.createElement("button");
-
+    crd.onclick = () => {
+      localStorage.setItem("id", el.id);
+      console.log(el.id);
+      location.href = "./productPage.html";
+    };
     image.src = el.image;
     name.innerText = el.product_name;
     rate.innerText = el.ratting;
