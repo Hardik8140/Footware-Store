@@ -7,6 +7,10 @@
     <title>Comfertable Women's Shoes and Footwear</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/women.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
   </head>
   <body>
     <!-- NavBar -->
@@ -35,8 +39,11 @@
 
     <!-- Product type -->
     <h2>Women's Shoes and Footwear</h2>
-    <div id="Wcoll">
-      <div class="card">
+    <div
+      class="carousel2"
+      data-flickity='{ "groupCells": true,"wrapAround": true ,"pageDots": false}'
+    >
+      <div class="carousel-cell2">
         <a href="./classic.html">
           <img
             src="https://media.crocs.com/image/upload/products/12-13-2022-sale-womens-v2.jpg"
@@ -45,7 +52,7 @@
           <p>Women's Sale</p>
         </a>
       </div>
-      <div class="card">
+      <div class="carousel-cell2">
         <a href="">
           <img
             src="https://media.crocs.com/images/f_auto,q_auto,dpr_auto/marketing/Dektophp-category-carousel-fuzz-lined/Crocs"
@@ -54,7 +61,7 @@
           <p>Fuzz Lined</p>
         </a>
       </div>
-      <div class="card">
+      <div class="carousel-cell2">
         <a href="">
           <img
             src="https://media.crocs.com/images/f_auto,q_auto,dpr_auto/marketing/Dektophp-category-carousel-platform/Crocs"
@@ -63,7 +70,7 @@
           <p>Platforms</p>
         </a>
       </div>
-      <div class="card">
+      <div class="carousel-cell2">
         <a href="">
           <img
             src="https://media.crocs.com/images/f_auto,q_auto,dpr_auto/marketing/Dektophp-category-carousel-sandal/Crocs"
@@ -72,7 +79,7 @@
           <p>Sandals</p>
         </a>
       </div>
-      <div class="card">
+      <div class="carousel-cell2">
         <a href="">
           <img
             src="https://media.crocs.com/image/upload/products/12-13-2022-men-view-all-product-sets-v2.jpg"
@@ -81,7 +88,7 @@
           <p>Sets</p>
         </a>
       </div>
-      <div class="card">
+      <div class="carousel-cell2">
         <a href="">
           <img
             src="https://media.crocs.com/image/upload/products/12-13-2022-men-view-all-caw.jpg"
@@ -90,7 +97,7 @@
           <p>Moons at Work</p>
         </a>
       </div>
-      <div class="card">
+      <div class="carousel-cell2">
         <a href="">
           <img
             src="https://media.crocs.com/images/f_auto,q_auto,dpr_auto/marketing/Dektophp-category-carousel-jibbitz/Crocs"
@@ -100,6 +107,30 @@
         </a>
       </div>
     </div>
+
+    <!-- <div class="carousel3" data-flickity='{ "contain": true }'>
+      <div class="carousel-cell2">
+        
+      </div>
+      <div class="carousel-cell2">
+        
+      </div>
+      <div class="carousel-cell2">
+        
+      </div>
+      <div class="carousel-cell2">
+        
+      </div>
+      <div class="carousel-cell2">
+        
+      </div>
+      <div class="carousel-cell2">
+        
+      </div>
+      <div class="carousel-cell2">
+        
+      </div>
+    </div> -->
 
     <!-- Product -->
 
@@ -258,6 +289,7 @@
       </div>
     </div>
   </body>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script src="./Script/product.js"></script>
   <script src="./Script/search.js"></script>
 </html>

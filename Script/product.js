@@ -354,7 +354,7 @@ function DisplayData(data) {
     let price = document.createElement("h3");
     let category = document.createElement("p");
     let addTocart = document.createElement("button");
-    crd.onclick = () => {
+    image.onclick = () => {
       localStorage.setItem("id", el.id);
       console.log(el.id);
       location.href = "./productPage.html";
@@ -379,6 +379,7 @@ function DisplayData(data) {
     container.append(crd);
   });
 }
+
 function checkAvailable(el) {
   for (let i = 0; i < cartData.length; i++) {
     if (el.id === cartData[i].id) {

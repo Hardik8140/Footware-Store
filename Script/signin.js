@@ -17,7 +17,7 @@ function InpData(e) {
     }
   }
   if (flag) {
-    alert("Sign In Successfull");
+    location.href = "./index.html";
   } else {
     alert("Email And Password are different");
   }

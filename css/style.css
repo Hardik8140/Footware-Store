@@ -23,10 +23,13 @@
 /* NavBar */
 
 #nav {
+  position: relative;
+  display: inline-block;
   display: flex;
   /* justify-content: space-between;
     align-items: center; */
   border: 1px solid black;
+  position: sticky;
 }
 #nav > .logo {
   display: flex;
@@ -61,6 +64,28 @@
   width: 20px;
 }
 
+/* .innerCategory {
+  display: none;
+  position: absolute;
+  background-color: white;
+  display: flex;
+  margin-left: 205px;
+  background-color: white;
+}
+.innerCategory > .c1,
+.c2 {
+  margin-top: 20px;
+  width: 200px;
+  padding: 20px;
+}
+.innerCategory > .c1 > h3,
+.c2 > h3 {
+  margin-bottom: 15px;
+}
+.innerCategory > .c1 > p,
+.c2 > p {
+  margin-bottom: 15px;
+} */
 /* Landing */
 
 #landing {
@@ -123,63 +148,73 @@
 
 /* Product type */
 
-#container {
-  width: 85%;
-  margin-bottom: 20px;
+.carousel {
+  width: 90%;
   margin: auto;
-  display: flex;
-  gap: 10px;
   margin-top: 30px;
   margin-bottom: 30px;
-  counter-increment: carousel-cell;
 }
-#container > .card {
-  border-radius: 9px;
-  text-decoration: none;
-}
-#container > .card:hover {
+.carousel-cell:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   cursor: pointer;
   text-decoration: underline;
 }
-#container > .card > a {
+.carousel-cell {
+  margin-right: 10px;
+  border-radius: 9px;
   text-decoration: none;
 }
-#container > .card > a > img {
-  border-top-right-radius: 9px;
-  border-top-left-radius: 9px;
-}
-#container > .card > a > p {
+.carousel-cell > a > p {
   margin-left: 10px;
   margin-bottom: 5px;
   font-weight: 600;
   color: rgb(54, 53, 53);
 }
-
-#container > .card:first-child {
+.carousel-cell > a > img {
+  border-top-right-radius: 9px;
+  border-top-left-radius: 9px;
+}
+.carousel-cell > a {
+  text-decoration: none;
+}
+.carousel-cell:first-child {
   background-color: rgb(230, 245, 230);
 }
-#container > .card:nth-child(2) {
+.carousel-cell:nth-child(2) {
   background-color: rgb(245, 234, 255);
 }
-#container > .card:nth-child(3) {
+.carousel-cell:nth-child(3) {
   background-color: rgb(247, 247, 228);
 }
-#container > .card:nth-child(4) {
+.carousel-cell:nth-child(4) {
   background-color: rgb(253, 253, 194);
 }
-#container > .card:nth-child(5) {
+.carousel-cell:nth-child(5) {
   background-color: rgb(218, 245, 255);
 }
-#container > .card:nth-child(6) {
+.carousel-cell:nth-child(6) {
   background-color: rgb(226, 188, 188);
+}
+#container {
+  width: 90%;
+  margin-bottom: 20px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#container > .card > a {
+  text-decoration: none;
 }
 
 /* Festival */
 
 #festival {
   margin-top: 20px;
-  width: 85%;
+  width: 90%;
   background-image: url(https://media.crocs.com/images/f_auto,q_auto,dpr_auto/marketing/Upsell_Desktop_1280x500_Hiker1/Crocs);
   background-position: center;
   height: 500px;
@@ -204,57 +239,58 @@
 }
 
 /* Third Toggel */
-
-#container1 {
-  width: 85%;
-  position: relative;
+.flickity-slider {
+  position: absolute;
+  width: 100%;
+  height: 40%;
+}
+.carousel1 {
+  width: 90%;
   margin: auto;
   margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
+  margin-bottom: 30px;
 }
-#container1 > .card1 {
-  width: 15%;
-  border-radius: 9px;
-  text-decoration: none;
-  counter-increment: card1;
-}
-#container1 > .card1:hover {
+.carousel-cell1:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   cursor: pointer;
   text-decoration: underline;
 }
-#container1 > .card1 > a {
+.carousel-cell1 {
+  width: 15%;
+  margin-right: 10px;
+  border-radius: 9px;
   text-decoration: none;
 }
-#container1 > .card1 > a > img {
-  width: 100%;
-  border-top-right-radius: 9px;
-  border-top-left-radius: 9px;
-}
-#container1 > .card1 > a > p {
+.carousel-cell1 > a > p {
   margin-left: 10px;
   margin-bottom: 5px;
   font-weight: 600;
   color: rgb(54, 53, 53);
 }
-
-#container1 > .card1:first-child {
+.carousel-cell1 > a > img {
+  width: 100%;
+  border-top-right-radius: 9px;
+  border-top-left-radius: 9px;
+}
+.carousel-cell1 > a {
+  text-decoration: none;
+}
+.carousel-cell1:first-child {
   background-color: rgb(230, 245, 230);
 }
-#container1 > .card1:nth-child(2) {
+.carousel-cell1:nth-child(2) {
   background-color: rgb(245, 234, 255);
 }
-#container1 > .card1:nth-child(3) {
+.carousel-cell1:nth-child(3) {
   background-color: rgb(247, 247, 228);
 }
-#container1 > .card1:nth-child(4) {
+.carousel-cell1:nth-child(4) {
   background-color: rgb(253, 253, 194);
 }
-#container1 > .card1:nth-child(5) {
+.carousel-cell1:nth-child(5) {
   background-color: rgb(218, 245, 255);
 }
-#container1 > .card1:nth-child(6) {
+.carousel-cell1:nth-child(6) {
   background-color: rgb(226, 188, 188);
 }
 
@@ -262,7 +298,7 @@
 
 #wheather {
   margin-top: 20px;
-  width: 85%;
+  width: 90%;
   background-image: url(https://media.crocs.com/images/f_auto,q_auto,dpr_auto/marketing/Rainboots_Upsell_Desktop_1280x500/Crocs);
   background-position: center;
   height: 500px;
@@ -291,7 +327,7 @@
 
 #discount {
   margin-top: 20px;
-  width: 85%;
+  width: 90%;
   background-image: url(https://media.crocs.com/images/f_auto,q_auto/marketing/au-nov-jibb-upsell2-full/Crocs);
   background-position: center;
   height: 500px;
