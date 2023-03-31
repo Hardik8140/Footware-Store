@@ -23,6 +23,26 @@
       <a href="./index.html"><img src="./image/logo.png" alt="Error" /></a>
       <div class="logo">
         <a href="./women.html" id="women">WOMEN </a>
+        <!-- <div class="innerCategory">
+          <div class="c1">
+            <h3>BY STYLE</h3>
+            <p>Clogs</p>
+            <p>Boots</p>
+            <p>Sandle</p>
+            <p>Slides</p>
+            <p>Flip-Flop</p>
+            <p>Socks</p>
+          </div>
+          <div class="c2">
+            <h3>BY STYLE</h3>
+            <p>Clogs</p>
+            <p>Boots</p>
+            <p>Sandle</p>
+            <p>Slides</p>
+            <p>Flip-Flop</p>
+            <p>Socks</p>
+          </div>
+        </div> -->
         <a href="./men.html">MEN</a>
         <a href="./kids.html">KIDS</a>
         <a href="./mooncharm.html">MOON CHARMS</a>
@@ -68,8 +88,8 @@
 
     <!-- Product type -->
 
-    <div id="container" data-flickity='{ "groupCells": true }'>
-      <div class="card">
+    <div class="carousel" data-flickity='{ "contain": true,"pageDots": false }'>
+      <div class="carousel-cell">
         <a href="./classic.html">
           <img
             src="https://media.crocs.com/images/f_auto,q_auto,dpr_auto/marketing/Dektophp-category-carousel-classic/Crocs"
@@ -78,7 +98,7 @@
           <p>Classics</p>
         </a>
       </div>
-      <div class="card">
+      <div class="carousel-cell">
         <a href="">
           <img
             src="https://media.crocs.com/images/f_auto,q_auto,dpr_auto/marketing/Dektophp-category-carousel-fuzz-lined/Crocs"
@@ -87,7 +107,7 @@
           <p>Fuzz Lined</p>
         </a>
       </div>
-      <div class="card">
+      <div class="carousel-cell">
         <a href="">
           <img
             src="https://media.crocs.com/images/f_auto,q_auto,dpr_auto/marketing/Dektophp-category-carousel-platform/Crocs"
@@ -96,7 +116,7 @@
           <p>Platforms</p>
         </a>
       </div>
-      <div class="card">
+      <div class="carousel-cell">
         <a href="">
           <img
             src="https://media.crocs.com/images/f_auto,q_auto,dpr_auto/marketing/Dektophp-category-carousel-sandal/Crocs"
@@ -105,7 +125,7 @@
           <p>Sandals</p>
         </a>
       </div>
-      <div class="card">
+      <div class="carousel-cell">
         <a href="">
           <img
             src="https://media.crocs.com/images/f_auto,q_auto,dpr_auto/marketing/Dektophp-category-carousel-glitter/Crocs"
@@ -114,7 +134,16 @@
           <p>Glitter</p>
         </a>
       </div>
-      <div class="card">
+      <div class="carousel-cell">
+        <a href="">
+          <img
+            src="https://media.crocs.com/images/f_auto,q_auto,dpr_auto/marketing/Dektophp-category-carousel-jibbitz/Crocs"
+            alt="error"
+          />
+          <p>Moons</p>
+        </a>
+      </div>
+      <div class="carousel-cell">
         <a href="">
           <img
             src="https://media.crocs.com/images/f_auto,q_auto,dpr_auto/marketing/Dektophp-category-carousel-jibbitz/Crocs"
@@ -136,8 +165,11 @@
 
     <!-- Third Toggel -->
 
-    <div id="container1">
-      <div class="card1">
+    <div
+      class="carousel1"
+      data-flickity='{ "contain": true , "pageDots": false }'
+    >
+      <div class="carousel-cell1">
         <a href="./classic.html">
           <img
             src="https://media.crocs.com/images/f_auto,q_auto,dpr_auto/marketing/HelloKitty-Carousel-Tile-2023-Desktop/Crocs"
@@ -146,7 +178,7 @@
           <p>Hello Kitty</p>
         </a>
       </div>
-      <div class="card1">
+      <div class="carousel-cell1">
         <a href="">
           <img
             src="https://media.crocs.com/images/f_auto,q_auto,dpr_auto/marketing/Minecraft-Carousel%20-Tile-2023-Desktop/Crocs"
@@ -155,7 +187,7 @@
           <p>Minicraft</p>
         </a>
       </div>
-      <div class="card1">
+      <div class="carousel-cell1">
         <a href="">
           <img
             src="https://media.crocs.com/images/f_auto,q_auto,dpr_auto/marketing/Disney-Carousel-Tile-2023-Desktop/Crocs"
@@ -164,7 +196,7 @@
           <p>Disney</p>
         </a>
       </div>
-      <div class="card1">
+      <div class="carousel-cell1">
         <a href="">
           <img
             src="https://media.crocs.com/images/f_auto,q_auto,dpr_auto/marketing/Marvel-Carousel%20-Tile-2023-Desktop/Crocs"
@@ -173,7 +205,7 @@
           <p>Marvel</p>
         </a>
       </div>
-      <div class="card1">
+      <div class="carousel-cell1">
         <a href="">
           <img
             src="https://media.crocs.com/images/f_auto,q_auto,dpr_auto/marketing/Pokemon-Carousel%20-Tile-2023-Desktop/Crocs"
@@ -182,13 +214,22 @@
           <p>Pokemon</p>
         </a>
       </div>
-      <div class="card1">
+      <div class="carousel-cell1">
         <a href="">
           <img
-            src="https://media.crocs.com/images/f_auto,q_auto,dpr_auto/products/category-carousel-nba/Crocs"
+            src="https://media.crocs.com/images/f_auto,q_auto,dpr_auto/marketing/StarWars-Tile-Desktop-radius-test/Crocs"
             alt="error"
           />
-          <p>NBC</p>
+          <p>Star Wars</p>
+        </a>
+      </div>
+      <div class="carousel-cell1">
+        <a href="">
+          <img
+            src="https://media.crocs.com/images/f_auto,q_auto,dpr_auto/marketing/LisaFrank-Carousel%20-Tile-2023-Desktop/Crocs"
+            alt="error"
+          />
+          <p>Lisa Frank</p>
         </a>
       </div>
     </div>
@@ -320,6 +361,6 @@
       </div>
     </div>
   </body>
-  <script src="./Script/search.js"></script>
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="./Script/search.js"></script>
 </html>

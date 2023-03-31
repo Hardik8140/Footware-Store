@@ -1,50 +1,47 @@
 /* Product type */
-
-#Wcoll {
-  display: flex;
-  justify-content: space-around;
-  gap: 10px;
+.carousel2 {
+  padding: 15px;
 }
-#Wcoll > .card {
+.carousel-cell2 {
   width: 14%;
-  border-radius: 9px;
+  margin-right: 10px;
+  border-radius: 10px;
 }
-#Wcoll > .card:hover {
+.carousel-cell2:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   cursor: pointer;
   text-decoration: underline;
 }
-#Wcoll > .card > a {
-  text-decoration: none;
-}
-#Wcoll > .card > a > img {
-  width: 100%;
-  border-top-right-radius: 9px;
-  border-top-left-radius: 9px;
-}
-#Wcoll > .card > a > p {
+.carousel-cell2 > a > p {
   margin-left: 10px;
   margin-bottom: 5px;
   font-weight: 600;
   color: rgb(54, 53, 53);
 }
-
-#Wcoll > .card:first-child {
+.carousel-cell2 > a > img {
+  width: 100%;
+  border-top-right-radius: 9px;
+  border-top-left-radius: 9px;
+}
+.carousel-cell2 > a {
+  text-decoration: none;
+}
+.carousel-cell2:first-child {
   background-color: rgb(230, 245, 230);
 }
-#Wcoll > .card:nth-child(2) {
+.carousel-cell2:nth-child(2) {
   background-color: rgb(245, 234, 255);
 }
-#Wcoll > .card:nth-child(3) {
+.carousel-cell2:nth-child(3) {
   background-color: rgb(247, 247, 228);
 }
-#Wcoll > .card:nth-child(4) {
+.carousel-cell2:nth-child(4) {
   background-color: rgb(253, 253, 194);
 }
-#Wcoll > .card:nth-child(5) {
+.carousel-cell2:nth-child(5) {
   background-color: rgb(218, 245, 255);
 }
-#Wcoll > .card:nth-child(6) {
+.carousel-cell2:nth-child(6) {
   background-color: rgb(226, 188, 188);
 }
 
@@ -102,7 +99,7 @@
   width: 30%;
 }
 #product > #allproduct {
-  width: 70%;
+  width: 71%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
@@ -149,4 +146,16 @@
   color: white;
   text-decoration: underline;
   cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  #product > #allproduct {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Small Screen */
+@media only screen and (max-width: 450px) {
+  #product > #allproduct {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

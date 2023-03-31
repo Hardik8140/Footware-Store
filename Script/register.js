@@ -4,6 +4,7 @@ let Email = document.getElementById("email");
 let CEmail = document.getElementById("Cemail");
 let Pass = document.getElementById("pass");
 let Cpass = document.getElementById("Cpass");
+
 let RData = JSON.parse(localStorage.getItem("Register")) || [];
 
 myForm.addEventListener("submit", InpData);
