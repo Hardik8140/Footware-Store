@@ -64,3 +64,9 @@ function DisplayData() {
   total.innerText = sum;
 }
 DisplayData();
+
+let checkout = document.getElementById("buynow");
+
+checkout.addEventListener("click", () => {
+  location.href = "./checkout.html";
+});

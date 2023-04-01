@@ -287,7 +287,7 @@ for (let i = 0; i < but.length; i++) {
     let filtered = footproduct.filter((ele) => {
       return ele.category === but[i].innerText;
     });
-    console.log(filtered);
+    // console.log(filtered);
     DisplayData(filtered);
   });
 }

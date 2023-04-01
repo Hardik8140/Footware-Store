@@ -7,6 +7,7 @@ let SData = JSON.parse(localStorage.getItem("Register")) || [];
 Form.addEventListener("submit", InpData);
 
 let flag = false;
+
 function InpData(e) {
   e.preventDefault();
 

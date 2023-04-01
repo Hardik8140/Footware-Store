@@ -9,8 +9,8 @@ let RData = JSON.parse(localStorage.getItem("Register")) || [];
 
 myForm.addEventListener("submit", InpData);
 
-function InpData(e) {
-  e.preventDefault();
+function InpData() {
+  // e.preventDefault();
 
   let Fname = document.getElementById("fname").value;
   let Lname = document.getElementById("lname").value;

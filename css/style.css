@@ -501,4 +501,10 @@
 
 /* Small Screen */
 @media only screen and (max-width: 450px) {
+  #inp {
+    display: none;
+  }
+  #search {
+    display: block;
+  }
 }

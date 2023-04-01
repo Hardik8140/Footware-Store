@@ -1,0 +1,34 @@
+#user {
+  /* border: 1px solid red; */
+  width: 50%;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+#user > h2 {
+  border: 1px solid lightgrey;
+  padding: 8px;
+}
+#user > h4 {
+  /* border: 1px solid gray; */
+  padding: 13px;
+}
+#user .detail {
+  width: 90%;
+  margin: auto;
+  padding: 11px;
+  margin-bottom: 22px;
+}
+#user select {
+  width: 90%;
+  margin: auto;
+  padding: 11px;
+  margin-bottom: 22px;
+}
+#user button {
+  width: 90%;
+  margin: auto;
+  padding: 11px;
+  margin-bottom: 22px;
+}
